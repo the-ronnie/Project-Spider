@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo-slideshow App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Spider</h1>
+        <button id="login-button">
+            <a href="SIgnUp.html" class="button">Login</a> <!-- Add this line -->
+        </button>
+    </header>
+    <main>
+        <div id="upload-section" class="drop-zone">
+            <h2>Upload Images</h2>
+            <label for="image-upload" class="button">Choose Files</label>
+            <input type="file" id="image-upload" accept="image/*" multiple>
+            <div id="image-preview" class="image-grid"></div>
+        </div>
+        <div id="customize-section">
+            <h2>Music customization</h2>
+            <label for="background-music">Background Music:</label>
+            <input type="file" id="background-music" accept="audio/*">
+            <!-- Add more customization options here -->
+            <button class="upload-music-button">Upload Music</button>
+        </div>
+        <div id="selected-images-section">
+            <h2>Select Images</h2>
+            <div id="selected-images"></div>
+        </div>
+        <button id="preview-button" class="button">Preview Video</button>
+        <div id="video-preview-container">
+            <video id="video-preview" controls></video>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Photo-slideshow App</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

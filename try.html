@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editing Software</title>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Video Editing Software</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Sidebar -->
+        <aside>
+            <h2>Project Files</h2>
+            <ul>
+                <li>video1.mp4</li>
+                <li>video2.mp4</li>
+                <li>audio.mp3</li>
+            </ul>
+            <button class="button">Import Media</button>
+            <button class="button">Export Project</button>
+        </aside>
+
+        <!-- Video Player -->
+        <section id="video-player">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div id="timeline"></div>
+            <button class="button">Play</button>
+            <button class="button">Pause</button>
+            <button class="button">Stop</button>
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline-container">
+            <h2>Timeline</h2>
+            <div id="timeline"></div>
+        </section>
+
+        <!-- Properties Panel -->
+        <section id="properties-panel">
+            <h2>Properties</h2>
+            <label for="video-title">Title:</label>
+            <input type="text" id="video-title">
+            <label for="video-duration">Duration:</label>
+            <input type="text" id="video-duration" readonly>
+            <label for="video-resolution">Resolution:</label>
+            <input type="text" id="video-resolution" readonly>
+            <button class="button">Apply Changes</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Video Editing Software</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

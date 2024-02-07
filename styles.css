@@ -1,0 +1,197 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Drop zone */
+.drop-zone {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.drop-zone h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.drop-zone input[type="file"] {
+    display: none;
+}
+
+.drop-zone label {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.drop-zone label:hover {
+    background-color: #555;
+}
+
+/* Image preview */
+#image-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px; /* Increased gap */
+}
+
+#image-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Button */
+.button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Music customization section */
+#customize-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+#customize-section h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#customize-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#customize-section input[type="file"] {
+    display: none;
+}
+
+#customize-section .upload-music-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#customize-section .upload-music-button:hover {
+    background-color: #555;
+}
+
+/* Selected images section */
+#selected-images-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    float: left;
+    clear: left;
+}
+
+#selected-images-section h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.selected-image-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.selected-image-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.selected-image-container .close-button {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Login button */
+#login-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #33333300;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
