@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>SPIDER</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/css/styles1.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header">
+    <div class="container-fluid">
+      <div class="logo">
+        <h1><a href="index">SPIDER</a></h1>
+      </div>
+    </div>
+  </header>
+
+  <audio id="myAudio" autoplay="1">
+    <source src="./../static/music/opening.mp3" type="audio/mp3">
+  </audio>
+  
+  <section id="hero">
+    <div class="container">
+      <div class="form-container">
+        <form id="signin-form" class="form" action="/login" method="POST">
+          <div class="form-group">
+            <input type="text" id="signin-username" name="signin-username" required placeholder="Username">
+          </div>
+          <div class="form-group">
+            <input type="password" id="signin-password" name="signin-password" required placeholder="Password">
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+        <div class="form-switch">
+          <span>Don't have an account?</span>
+          <button id="signup-switch">Sign Up</button>
+        </div>
+      </div>
+      <div class="form-container hidden">
+        <form id="signup-form" class="form" action="/signup" method="POST" onsubmit="return validatePassword(event)">
+          <div class="form-group">
+            <input type="text" id="signup-username" name="signup-username" required placeholder="Username">
+          </div>
+          <div class="form-group">
+            <input type="email" id="signup-email" name="signup-email" required placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" id="signup-password" name="signup-password" required placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm Password">
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="form-switch">
+          <span>Already have an account?</span>
+          <button id="signin-switch">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../static/js/script1.js"></script>
+  <script>
+    function validatePassword(event) {
+      var password = document.getElementById("signup-password").value;
+      var confirmPassword = document.getElementById("confirm-password").value;
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        event.preventDefault(); // Prevent form submission
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

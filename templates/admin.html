@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Admin Page</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet">
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/css/try.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header id="header">
+    <div class="container-fluid">
+      <div class="logo">
+        <h1><a href="/">SPIDER</a></h1>
+      </div>
+    </div>
+  </header>
+
+  <section id="admin">
+    <div class="container">
+      <h2>User List</h2>
+      <div id="user-list">
+        {% for user in users %}
+        <div>
+          <p>Username: {{ user.username }}</p>
+          <p>Email: {{ user.email }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <script src="../static/js/try.js"></script>
+
+</body>
+
+</html>

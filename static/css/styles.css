@@ -1,0 +1,543 @@
+/* Global styles */
+@import url('https://fonts.cdnfonts.com/css/homoarakhn');
+
+                
+                
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #000000; */
+    background:url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    background-color:#2a68b4;
+    color: #000;
+    font-family: 'Homoarakhn', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    /* margin-bottom: 20px; */
+    /* position: fixed; */
+    width: 100%;
+    height:5vh;
+    display: flex;
+}
+
+.logo{
+    height:100%;
+    display: inline-block;
+    margin-left: 40%;
+    margin-right:10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+body header button{
+    background-color: #000000;
+    color: #f7f7f7;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+body header button a {
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+main {
+    max-width: 100vw;
+    height: 87vh;
+    display: flex;
+    flex-direction: row;
+    /* margin: 0 auto; */
+    color: #000000;
+    /* border: 1px solid #ccc; */
+    /* background-color: #000000; */
+
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+}
+
+.upload {
+    display: flex;
+    width: 30%;
+    margin: 10px 10px 10px 0px;
+    /* height: 100%; */
+    flex-direction: column;
+    /* position: absolute; */
+    padding: 10px;
+    border: 1px solid rgb(11, 255, 239);
+    border-radius: 10px;
+    background-color: #2B3784;
+}
+
+/* Drop zone */
+.drop-zone {
+    border: 2px dashed #711468;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    /* position: absolute; */
+    /* margin-top: 10px; */
+    height: 50%;
+    background-color: #447bbe;
+
+    /* right: 10px; */
+    display: block;
+
+    flex-direction: top;
+    overflow-y: scroll;
+    /* Add scrollbar for vertical overflow */
+}
+
+.drop-zone::-webkit-scrollbar {
+    display: none;
+}
+
+.drop-zone h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.drop-zone input[type="file"] {
+    display: none;
+}
+
+.drop-zone label {
+    background-color:black;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.drop-zone label:hover {
+    background-color: black;
+    color: red;
+}
+
+/* Image preview */
+#image-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    /* Increased gap */
+}
+
+#image-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Button */
+.button {
+    background-color: #000000;
+    color: #f7f7f7;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: black;
+    color: red;
+}
+
+
+
+/* Music customization section */
+#customize-section {
+    background-color: #447bbe;
+    border: 2px dashed #6a106e;
+    padding: 10px;
+    border-radius: 10px;
+    /* margin-bottom: 10px; */
+    /* float: right; */
+    /* position: absolute; */
+    text-align: center;
+    bottom: 10px;
+    height: 50%;
+    overflow-y: scroll;
+    /* Add scrollbar for vertical overflow */
+}
+
+#customize-section::-webkit-scrollbar {
+    display: none;
+}
+
+#customize-section h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#customize-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#customize-section input[type="file"] {
+    display: none;
+}
+
+.upload-music {
+    border: 2px dashed #711468;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    height: 50%;
+
+    /* right: 10px; */
+    display: block;
+
+    flex-direction: top;
+    overflow-y: scroll;
+}
+
+.upload-music::-webkit-scrollbar {
+    display: none;
+}
+
+#customize-section .upload-music .upload-music-button {
+    background-color: black;
+    color: #bfbbbb;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#customize-section .upload-music .upload-music-button:hover {
+    color: red;
+    background-color: black;
+}
+
+.musics {
+    border: 2px dashed #711468;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.musics hr {
+    width: 80%;
+    color: rgb(5, 5, 5);
+}
+
+.music-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #000000;
+
+}
+
+.audio audio {
+    width: 90%;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+/* Selected images section */
+
+#transition-section {
+    background-color: #2B3784;
+    border: 1px solid rgb(11, 255, 239);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    width: 15%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+#container {
+    background-color: #447bbe;
+    height: 90%;
+    border: 2px dashed #711468;
+    overflow-y: auto;
+    /* Add scrollbar for vertical overflow */
+    margin-right: 10px;
+    padding-left: 10px;
+    /* padding-right: 10px; */
+    border-radius: 10px;
+
+    width: 90%;
+}
+
+#container::-webkit-scrollbar {
+    display: none;
+}
+
+.selected-image-container {
+    /* position: relative; */
+    height: 100%;
+
+
+}
+
+#transition-container {
+    padding: 5%;
+    width: 90%;
+}
+
+.transition-container img {
+    width: 90%;
+    height: 25%;
+    border-radius: 5px;
+    object-fit: fit;
+    background-color: #000000;
+}
+.select-transition-button{
+    background-color: #000000;
+    color: #f7f7f7;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: red 0.3s;
+    margin-left:30%;
+    margin-bottom:10px;
+}
+
+#apply-transition {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 25%;
+    width: 50%;
+}
+
+.hide {
+    display: none;
+}
+
+.track img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    object-fit: fit;
+    background-color: #000000;
+}
+
+/* 
+.selected-image-container .close-button {
+    position: relative;
+    top: -5px;
+    right: -5px;
+    background-color: #1c9c76;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    
+} */
+
+
+/* Login button */
+#login-button {
+    top: 2%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all 0.3s;
+    background-color: #B11313;
+    padding: 11px 11px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgb(211, 211, 211);
+    text-decoration: none;
+    /* Remove underline from the anchor */
+    color: rgb(0, 0, 0);
+    /* Set text color */
+    font-size: 14px;
+    /* Set font size */
+    font-weight: 600;
+    /* Set font weight */
+}
+
+#login-button:hover {
+    background-color: rgba(211, 211, 211, 0.5);
+    /* Change background color on hover */
+}
+
+#login-button .svgIcon {
+    width: 16px;
+    height: auto;
+    /* margin-right: ; */
+    /* Add margin between icon and text */
+}
+
+#dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#login-button.show-dropdown #dropdown-menu {
+    display: block;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.username {
+
+    font-weight: bold;
+}
+
+#logout-button {
+    margin-left: auto;
+}
+
+
+
+#create-button {
+    position: absolute;
+    bottom: -94px;
+    left: 22px;
+    color: #040404;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#create-button a {
+    text-decoration: none;
+}
+
+#vid {
+    background-color: #000000;
+    margin: 10px 10px 10px 0px;
+    left: 30%;
+    width: 57%;
+    /* height: 100%; */
+    border: 1px solid rgb(11, 255, 239);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#preview-button {
+    margin-top: 15px;
+    width: 130px;
+    height: 40px;
+    /* padding: 10px; */
+    font-size: 20px;
+    margin-left: 37.5%;
+    background-color:#df1f2d;
+    border-radius: 10px;
+}
+.pre-button:hover {
+    color:white;
+}
+
+#video-preview {
+    height: 100%;
+    width: 100%;
+
+}
+
+.track {
+    margin-top: 20px;
+    height: 100%;
+    padding: 10px;
+    font-size: 20px;
+    /* margin-left: 37.5%; */
+    border-radius: 10px;
+    border: 2px dashed rgb(118, 5, 136);
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .upload,
+    #selected-images-section,
+    #vid {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .upload,
+    #selected-images-section {
+        padding: 10px;
+    }
+}
+
+/* video section */
+#timeline {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+}
+.timeline-transition{
+    width:15%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+.timeline-transition button{
+    margin-top:2px;
+}
+
+.video-clip {
+    position: absolute;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+}

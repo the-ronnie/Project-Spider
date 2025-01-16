@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo-slideshow App</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<header>
+    <img class="logo" src="../static/img/Spiderlogo.png">
+    <h1>SPIDER</h1>
+    <button id="login-button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 95 114" class="svgIcon">
+            <rect fill="black" rx="28.5" height="57" width="57" x="19"></rect>
+            <path fill="black" d="M0 109.5C0 83.2665 21.2665 62 47.5 62V62C73.7335 62 95 83.2665 95 109.5V114H0V109.5Z">
+            </path>
+        </svg>
+        <div id="dropdown-menu" class="dropdown-menu"></div>
+    </button>
+
+</header>
+
+<body>
+    <audio id="myAudio" autoplay="0">
+        <source src="./../static/music/opening2.mp3" type="audio/mp3">
+    </audio>
+
+    <main>
+        <div id="transition-section">
+            <div id="container">
+                <h2>Transitions</h2>
+                <div class="transition-container" id="dissolve">
+                    <img src="../static/img/fadein.jpg">
+                    <button class="select-transition-button" id="stb">Select</button>
+                </div>
+                <div class="transition-container" id="slide">
+                    <img src="../static/img/fadeout.jpg">
+                    <button class="select-transition-button" id="stb">Select</button>
+                </div>
+                <div class="transition-container" id="fade">
+                    <img src="../static/img/crossfade.jpg">
+                    <button class="select-transition-button" id="stb">Select</button>
+                </div>
+                
+            </div>
+        
+            <div id="apply-transition">
+                <button id="transition-button" class="button">APPLY</button>
+            </div>
+        </div>
+        
+        <div id="vid">
+            <div id="video-preview-container">
+                <video controls autoplay id="video-preview">
+                    <source src="/video" type="video/mp4">
+                    Your browser does not support the video tag.            
+                </video>
+            </div>
+            <button id="preview-button" class="pre-button">Preview</button>
+            <button id="download-button" class="pre-button">Download</button>
+            <div class="track">
+                <div id="timeline">
+                    <!-- Timeline content will be generated dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <div class="upload">
+            <div id="upload-section" class="drop-zone">
+                <h2>Uploaded Images</h2>
+                <label for="image-upload" class="button">Choose Files</label>
+                <input type="file" id="image-upload" accept="image/*" multiple>     
+                <!-- Image-upload to ImageUploadInput as in JS -->
+                <div id="image-preview" class="image-grid">
+                    {% for image in images %}
+                    <div class="image-container">
+                        <img src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+                        <input type="checkbox" class="image-checkbox">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="customize-section">
+                <h2>Music customization</h2>
+
+                <div class="musics">
+                    <div class="search-wrapper">
+                        <label for="search">Search Music</label>
+                        <input type=search id="search" data-search>
+                    </div>
+                    <hr>
+                    <div class="music-library">
+                        <h2>Music Library</h2>
+                        <div class="music-container">
+                            <div class="music-name">Calling</div>
+                            <div class="audio">
+                                <audio controls id="ad">
+                                    <source src="../static/music/Calling.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <button class="select-music-button" id="selectMusic">Select</button>
+                        </div>
+                        <div class="music-container">
+                            <div class="music-name">Instrumental_Calling</div>
+                            <div class="audio">
+                                <audio controls id="ad">
+                                    <source src="../static/music/Instrumental_Calling.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <button class="select-music-button" id="selectMusic">Select</button>
+                        </div>
+                        <div class="music-container">
+                            <div class="music-name">Annihilate</div>
+                            <div class="audio">
+                                <audio controls id="ad">
+                                    <source src="../static/music/Annihilate.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <button class="select-music-button" id="selectMusic">Select</button>
+                        </div>
+                        <div class="music-container">
+                            <div class="music-name">Dreaming</div>
+                            <div class="audio">
+                                <audio controls id="ad">
+                                    <source src="../static/music/Dreaming.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <button class="select-music-button" id="selectMusic">Select</button>
+                        </div>
+                        <div class="music-container">
+                            <div class="music-name">SeeYouAgain</div>
+                            <div class="audio">
+                                <audio controls id="ad">
+                                    <source src="../static/music/SeeYouAgain.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <button class="select-music-button" id="selectMusic">Select</button>
+                        </div>
+                        <div class="music-container">
+                            <div class="music-name">Bahubali</div>
+                            <div class="audio">
+                                <audio controls id="ad">
+                                    <source src="../static/music/song1.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <button class="select-music-button" id="selectMusic">Select</button>
+                        </div>
+                        <div class="music-container">
+                            <div class="music-name">Amplifier</div>
+                            <div class="audio">
+                                <audio controls id="ad">
+                                    <source src="../static/music/song2.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <button class="select-music-button" id="selectMusic">Select</button>
+                        </div>
+                    </div>
+                    <div id="try">
+                        <!-- <h1>PPP</h1> -->
+                        <div id="collect-image"></div>
+                    </div>
+                    <!-- Update the timeline section -->
+                    <!-- <div class="timeline">
+                        <h2>Timeline</h2>
+                        <div id="playlist" class="playlist"></div>
+                        <div id="timeline" class="timeline-items"></div>
+                    </div> -->
+                </div>
+                <div class="upload-music">
+                    <label for="background-music">Background Music:</label>
+                    <input type="file" id="background-music" accept="audio/*" hidden>
+                    <button class="upload-music-button" id="upload-music-button">Upload Music</button>
+                </div>
+
+                <!-- Add more customization options here -->
+            </div>
+        </div>
+        </div>
+
+        </div>   
+    </main>
+    
+    <script src="../static/js/script.js" defer></script>
+</body>
+
+</html>

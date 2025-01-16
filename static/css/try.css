@@ -1,0 +1,50 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f4f4f4;
+  background-image: url(../img/back.jpg);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo h1 a {
+  color: #f3eeee;
+  text-decoration: none;
+}
+
+#user-list {
+  margin-top: 20px;
+}
+
+/* User list styles */
+#user-list div {
+  background-color: #ffffff; /* White background for each user */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#user-list p {
+  margin: 0;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
